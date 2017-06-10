@@ -1,37 +1,4 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/krsapkota/multilabel_classification/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/krsapkota/multilabel_classification/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Multilabel classification using BP-MLL (Backpropagation for Multilabel Learning, [Zhang et. al](http://ieeexplore.ieee.org/document/1683770/))
+In Multilabel classification each data point is associated with a set of labels whose size is not fixed. The number of all possible labels is known but not the size of label set associated with each data point. 
+An example of such type of problem could be *keyword extraction for news articles*. A news article can be associated with a number of possible keywords in the keywords universe and the number of such keywords may not be known *apriori*. A simple way of solving such problem would be to devise a binary classification problem by training ```n``` independent binary classifiers each predicting whether or not a news article belongs to a certain class (has a certain keyword). One of the downsides of such method is that ```n``` seperate models need to be trained which is computationally expensive both during training and inference. The other downside of such approach is that correlation information between labels are completely ignored, which may not be desirable in most cases. 
+Turns out a simple modification of loss function while training a neural network allows us to learn multilabel classification effeciently.
