@@ -4,5 +4,5 @@ An example of such type of problem could be *keyword extraction for news article
 
 Turns out a simple modification of loss function while training a neural network allows us to learn multilabel classification effeciently.
 
-<img src="https://github.com/krsapkota/multilabel_classification/blob/master/multilabel_loss_function.png" width="380">
+<img src="multilabel_loss_function.png" width="380">
 
